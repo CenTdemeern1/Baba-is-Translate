@@ -31,7 +31,9 @@ translated=0
 for langcode in language_sequence:
 	for i in range(len(texts)):
 		if texts[i]==None:
-			texts[i]==""
+			texts[i]=="-"
+		if texts[i]=="":
+			texts[i]=="-"
 		worked=False
 		while not worked:
 			try:
