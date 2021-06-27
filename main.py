@@ -1,5 +1,5 @@
 import googletrans
-import sys
+import os,sys
 
 def ask(question,answers=None,case_sensitive=True,print_possibilities=False):
 	print("\n")
@@ -14,6 +14,10 @@ def ask(question,answers=None,case_sensitive=True,print_possibilities=False):
 			a = input(question+"\n> ")
 		return answers[a]
 	else: return a
+
+def press_enter_to_close():
+	input("Press enter to close the program.")
+	sys.exit(0)
 
 baba_dir = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baba Is You"
 
@@ -34,11 +38,9 @@ if ask_for_path:
 	where_is_the_baba_dir = ask("Where do you have Baba installed?")
 	if where_is_the_baba_dir.lower()=="i don't know":
 		print("Sorry, then you should probably figure that out first.\nIf you have a shortcut on your desktop, you can right-click it, and select \"Open file location\".")
-		input("Press enter to close the program.")
-		sys.exit(0)
+		press_enter_to_close()
 	if where_is_the_baba_dir.lower() in ["switch", "nintendo switch", "mobile", "phone", "android", "ios", "iphone"]:
 		print("Sorry, I can't help you with that. I'm made to patch the PC version of Baba is You.")
-		input("Press enter to close the program.")
-		sys.exit(0)
+		press_enter_to_close()
 	baba_dir = where_is_the_baba_dir
 
