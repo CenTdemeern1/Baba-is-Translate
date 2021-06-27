@@ -6,7 +6,7 @@ import time
 
 baba_dir = get_baba_dir() #Initiates questioning sequence for the baba directory
 
-lang = configparser.ConfigParser()
+lang = configparser.ConfigParser(allow_no_value=True)
 
 with open(os.path.join(baba_dir,"Data/Languages/lang_en.txt"),"r") as file:
 	english_data = file.read()
@@ -30,6 +30,8 @@ translated=0
 
 for langcode in language_sequence:
 	for i in range(len(texts)):
+		if texts[i]==None:
+			texts[i]==""
 		worked=False
 		while not worked:
 			try:
