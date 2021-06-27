@@ -36,5 +36,9 @@ if ask_for_path:
 		print("Sorry, then you should probably figure that out first.\nIf you have a shortcut on your desktop, you can right-click it, and select \"Open file location\".")
 		input("Press enter to close the program.")
 		sys.exit(0)
+	if where_is_the_baba_dir.lower() in ["switch", "nintendo switch", "mobile", "phone", "android", "ios", "iphone"]:
+		print("Sorry, I can't help you with that. I'm made to patch the PC version of Baba is You.")
+		input("Press enter to close the program.")
+		sys.exit(0)
 	baba_dir = where_is_the_baba_dir
 
