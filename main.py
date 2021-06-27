@@ -42,6 +42,8 @@ for langcode in language_sequence:
 				worked=False
 				print(f"{translated}/{len(texts)*len(language_sequence)} translated-Error, retrying-",end="\r")
 				time.sleep(3)
+			except TypeError:
+				texts[i]=="-" #Fallback
 			else:
 				worked=True
 		translated+=1
