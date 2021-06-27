@@ -32,7 +32,7 @@ if owns_baba_on_steam:
 
 if ask_for_path:
 	where_is_the_baba_dir = ask("Where do you have Baba installed?")
-	if where_is_the_baba_dir.lower()="i don't know":
+	if where_is_the_baba_dir.lower()=="i don't know":
 		print("Sorry, then you should probably figure that out first.\nIf you have a shortcut on your desktop, you can right-click it, and select \"Open file location\".")
 		input("Press enter to close the program.")
 		sys.exit(0)
